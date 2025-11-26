@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body bgcolor="#313131">
+     <script>
+    //    < function init() {
+    //         var name = "Mozilla"; 
+    //         function displayName() {
+    //             console.log(name); 
+    //         }
+    //         displayName();
+    //     }
+    //     init();
+    function outer(){
+        let username ="siddhi"
+        console.log("Outer",secret);
+        
+        function inner(){
+            let secret = "my123"
+            console.log("Inner",username);// got access here    
+        }
+        function innerTwo(){
+            console.log("inner two", username);
+            console.log(secret);
+            
+            
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+    console.log("Too Outer",username);
+    </script> 
+    
+</body>
+
+</html>
